@@ -1,0 +1,33 @@
+class Cart:
+
+    def __init__(self):
+        self.item = {}
+
+    def add_product(self, *args):
+        for item in args:
+                product, quantity = item
+                self.add_item(product, quantity)
+    
+    def add_item(self, product, quantity):
+         self.item[product] = quantity
+    
+
+    def show_cart(self):
+        if not self.item:
+            print("Cart is empty.")
+        else:
+            print("Cart contents:")
+            for product, quantity in self.item.items():
+                print(f" - {product}: {quantity}")
+
+    
+
+cart = Cart()
+cart.add_product(("T-Shirt", 100), ("Shirt", 200), ("Trouser", 300))
+cart.show_cart()
+
+cart2 = Cart()
+cart2.add_product(("Watch", 100))
+cart2.show_cart()
+
+
