@@ -1,0 +1,23 @@
+class ProductSearch:
+
+    def search_product(self, name=None, catagory=None, price=None):
+
+        if name and catagory and price:
+
+            print(f"Searching product by {name}, {catagory} and {price}")
+
+        elif name and catagory:
+
+             print(f"Searching product by {name} and {catagory}")
+
+        elif name:
+            print(f"Searching product by {name}")
+
+        else:
+            print("Showing all available products")
+
+product = ProductSearch()
+product.search_product("T-Shirts", "Boys", 1000)
+product.search_product("T-Shirts", "Boys")
+product.search_product("T-Shirts")
+product.search_product()
