@@ -1,0 +1,18 @@
+class Discount:
+   def discount(self, flat=None, percentage=None, buy1getone= None):
+    if flat is not None:
+        print("Flat discount")
+    elif percentage is not None:
+        print("Percentage discount")
+    elif buy1getone is not None:
+        print("Buy One Get One")
+    else:
+       print("No choice")
+
+dis = Discount()
+dis.discount(1)
+dis.discount(None,2)
+dis.discount(None,None,3)
+
+
+  
